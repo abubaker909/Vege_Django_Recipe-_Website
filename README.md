@@ -1,6 +1,4 @@
 
-
-```markdown
 # Django Receipes App
 
 This is a Django web application for managing and displaying receipes.
@@ -71,10 +69,3 @@ If you'd like to contribute to this project, please follow these steps:
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-Replace the placeholder URLs and details with your actual project information. Also, make sure to include a `LICENSE` file if you choose a specific license for your project.
