@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block start %}
+
+<div class = "container mt-5">
+    <h3>All Receipes List</h3><hr>
+
+<p>Type something in the input field to search the table:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<hr>
+
+      <table class="table table-striped table-dark table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Receipe Name</th>
+            <th scope="col">Receipe Description</th>
+            <th scope="col">Receipe Image</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id = "tableData">
+            {% for receipe in receipes %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{receipe.receipe_name}}</td>
+            <td>{{receipe.receipe_description}}</td>
+            <td>
+                <img src="/media/{{receipe.receipe_image}}" style="display:block;" width="100%" height="100%"  >
+            </td>
+            <td>
+                <a href = "/delete/{{receipe.id}}/" class = "btn btn-danger m-2">Delete</a>
+                <a href = "/update/{{receipe.id}}/" class = "btn btn-success m-2">Update</a>
+                <a href = "/getOne/{{receipe.id}}" class = "btn btn-primary m-2">Show</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tableData tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+        });
+    </script>
+
+{% endblock %}

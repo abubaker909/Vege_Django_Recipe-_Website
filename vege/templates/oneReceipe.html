@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block start %}
+
+    <div class = "container mt-5">
+    <h3>{{receipe.receipe_name}}</h3>
+    <hr>
+    <div class="text-center">
+        <img src="/media/{{receipe.receipe_image}}" class="img-fluid" height="mx-auto">
+    </div>
+    <hr>
+    <h5>Receipe Description : </h5>
+    <hr>
+    <p>
+        {{receipe.receipe_description}}
+    </p>
+    <hr>
+    </div>
+
+
+{% endblock %}
