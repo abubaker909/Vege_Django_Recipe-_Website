@@ -16,8 +16,8 @@ This is a Django web application for managing and displaying receipes.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/abubaker909/Vege_Django_Recipe-_Website.git
+   cd Vege_Django_Recipe-_Website
    ```
 
 2. Install dependencies:
